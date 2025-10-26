@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "wrangler-configurer",
+    "build": "vite build",
+    "premanifest": "npm run build",
+    "manifest": "manifest --entryPoint dist/client/manifest.js",
+    "predeploy": "wrangler-configurer",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@hiyocord/discord-interaction-client": "^0.2.1",
+    "@hiyocord/hiyocord-nexus-core": "^0.7.1",
+    "discord-api-types": "^0.38.38",
+    "hono": "^4.11.8"
+  }
+}
