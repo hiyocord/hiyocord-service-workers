@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "wrangler-configurer",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "hono": "^4.10.3"
+  }
+}
