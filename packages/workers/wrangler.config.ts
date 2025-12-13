@@ -11,7 +11,17 @@ export default {
     preview_urls: true,
     workers_dev: false,
     observability: {
-      enabled: true
+      enabled: true,
+      logs: {
+        enabled: true,
+        head_sampling_rate: 1,
+        persist: true,
+        invocation_logs: true
+      },
+      traces: {
+        enabled: false,
+        head_sampling_rate: 1,
+      }
     },
     upload_source_maps: true,
   }

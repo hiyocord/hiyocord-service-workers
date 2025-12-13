@@ -141,3 +141,5 @@ vite.config.ts.timestamp-*
 # wrangler
 .wrangler
 wrangler.jsonc
+
+.npmrc
