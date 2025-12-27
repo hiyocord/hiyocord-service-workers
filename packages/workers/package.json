@@ -6,12 +6,14 @@
   "scripts": {
     "prebuild": "wrangler-configurer",
     "build": "vite build",
+    "premanifest": "npm run build",
+    "manifest": "tsx src/nexus-register.ts",
     "predeploy": "wrangler-configurer",
     "deploy": "wrangler deploy"
   },
   "dependencies": {
-    "@hiyocord/discord-interaction-client": "^0.0.4",
-    "@hiyocord/hiyocord-nexus-core": "^0.0.1",
+    "@hiyocord/discord-interaction-client": "^0.2.0",
+    "@hiyocord/hiyocord-nexus-core": "^0.2.2",
     "hono": "^4.10.3"
   }
 }

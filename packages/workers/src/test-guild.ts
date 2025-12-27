@@ -1,9 +1,11 @@
 import { ApplicationCommandHandler, createBuilder, MessageFlags } from "@hiyocord/discord-interaction-client";
 
 export default {
-  name: "test",
-  description: "test command",
-  guildIds: [],
+  name: "test2",
+  description: "test guild command",
+  guildIds: [
+    "1195385456976724068"
+  ],
   handle: async c => {
     return createBuilder(c)
       .reply()
