@@ -5,12 +5,19 @@ import { createManifest, InteractionHandlerRegistry } from "@hiyocord/hiyocord-n
 
 
 const manifest = createManifest(registry as any as InteractionHandlerRegistry, {
-  baseUrl: "https://nexus.hiyocord.org",
+  baseUrl: "https://nexus-test.hiyocord.org",
   id: "org.hiyocord.nexus-test",
   name: "hiyocord nexus test service workers",
-  description: "test"
+  description: "test",
+  permissions: [{
+    type: "DISCORD_API_SCOPE",
+    scopes: {
+      "/guilds/:guildId": ["GET"]
+    }
+  }]
 })
 
+console.error(JSON.stringify(manifest))
 const response = await fetch("https://nexus.hiyocord.org/manifest", {
   method: "POST",
   body: JSON.stringify(manifest)

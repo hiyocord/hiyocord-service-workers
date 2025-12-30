@@ -47,3 +47,10 @@ jobs:
           key: dist-${{ github.sha }}
       - name: deploy
         run: npm run deploy
+
+      - name: set secret
+        run: |
+          worker_name=$(jq -r ".name"  <(tail -n +3 packages/workers/wrangler.jsonc))
+          curl https://${NEXUS_HOST}/.well-known/nexus-public-key | jq -jr ".public_key" | npx wrangler secret --name ${worker_name} put NEXUS_PUBLIC_KEY
+        env:
+          NEXUS_HOST: ${{ secrets.NEXUS_HOST }}

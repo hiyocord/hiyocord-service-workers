@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@hiyocord/discord-interaction-client": "^0.2.0",
-    "@hiyocord/hiyocord-nexus-core": "^0.2.2",
+    "@hiyocord/hiyocord-nexus-core": "^0.4.0",
     "hono": "^4.10.3"
   }
 }

@@ -26,6 +26,7 @@
     "vite": "^7.1.12"
   },
   "dependencies": {
+    "@hiyocord/hiyocord-nexus-core": "^0.4.0",
     "@hiyocord/wrangler-configurer": "^1.0.1"
   }
 }
