@@ -51,6 +51,7 @@ jobs:
       - name: set secret
         run: |
           worker_name=$(jq -r ".name"  <(tail -n +3 packages/workers/wrangler.jsonc))
-          curl https://${NEXUS_HOST}/.well-known/nexus-public-key | jq -jr ".public_key" | npx wrangler secret --name ${worker_name} put NEXUS_PUBLIC_KEY
+          curl ${NEXUS_URL}/.well-known/nexus-public-key | jq -jr ".public_key" | npx wrangler secret --name ${worker_name} put NEXUS_PUBLIC_KEY
+          npm run -w packages/workers manifest
         env:
-          NEXUS_HOST: ${{ secrets.NEXUS_HOST }}
+          NEXUS_URL: ${{ secrets.NEXUS_URL }}

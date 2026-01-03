@@ -3,7 +3,6 @@ import { registry } from "./register";
 import { createManifest, InteractionHandlerRegistry } from "@hiyocord/hiyocord-nexus-core/src";
 
 
-
 const manifest = createManifest(registry as any as InteractionHandlerRegistry, {
   baseUrl: "https://nexus-test.hiyocord.org",
   id: "org.hiyocord.nexus-test",
@@ -14,11 +13,14 @@ const manifest = createManifest(registry as any as InteractionHandlerRegistry, {
     scopes: {
       "/guilds/:guildId": ["GET"]
     }
-  }]
+  }],
+  signatureAlgorithm: "ed25519",
+  publicKey: ""
 })
 
 console.error(JSON.stringify(manifest))
-const response = await fetch("https://nexus.hiyocord.org/manifest", {
+
+const response = await fetch(`${process.env.NEXUS_URL}/api/manifests`, {
   method: "POST",
   body: JSON.stringify(manifest)
 })
