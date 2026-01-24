@@ -19,11 +19,11 @@
     "packages/workers"
   ],
   "devDependencies": {
-    "@cloudflare/vite-plugin": "1.13.15",
-    "@types/node": "24.9.1",
+    "@cloudflare/vite-plugin": "1.21.2",
+    "@types/node": "24.10.9",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
-    "vite": "7.1.12"
+    "vite": "7.3.1"
   },
   "dependencies": {
     "@hiyocord/hiyocord-nexus-core": "^0.4.0",
