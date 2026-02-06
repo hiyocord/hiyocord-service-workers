@@ -2,8 +2,6 @@ import { exit } from "process";
 import { registry } from "./register";
 import { createManifest, InteractionHandlerRegistry } from "@hiyocord/hiyocord-nexus-core";
 
-
-
 const manifest = createManifest(registry as InteractionHandlerRegistry, {
   baseUrl: "https://nexus-test.hiyocord.org",
   id: "org.hiyocord.nexus-test1",

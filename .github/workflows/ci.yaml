@@ -54,6 +54,8 @@ jobs:
       - name: deploy
         run: npm run deploy
 
+      - run: tree node_modules/@hiyocord/hiyocord-nexus-core
+      - run: cat node_modules/@hiyocord/hiyocord-nexus-core/package.json
       - name: set secret
         run: |
           worker_name=$(jq -r ".name"  <(tail -n +3 packages/workers/wrangler.jsonc))
