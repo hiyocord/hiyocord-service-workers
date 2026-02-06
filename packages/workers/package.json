@@ -12,8 +12,8 @@
     "deploy": "wrangler deploy"
   },
   "dependencies": {
-    "@hiyocord/discord-interaction-client": "^0.2.0",
+    "@hiyocord/discord-interaction-client": "^0.2.1",
     "@hiyocord/hiyocord-nexus-core": "^0.7.0",
-    "hono": "^4.10.3"
+    "hono": "^4.11.8"
   }
 }
