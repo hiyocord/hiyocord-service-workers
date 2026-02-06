@@ -56,9 +56,9 @@ jobs:
 
       - run: node -v
       - run: which node
-      - run: cat packages/workers/node_modules/@hiyocord/hiyocord-nexus-core/package.json
-      - run: ls -l packages/workers/node_modules/@hiyocord/hiyocord-nexus-core
-      - run: ls -l packages/workers/node_modules/@hiyocord/hiyocord-nexus-core/dist
+      - run: cat node_modules/@hiyocord/hiyocord-nexus-core/package.json
+      - run: ls -l node_modules/@hiyocord/hiyocord-nexus-core
+      - run: ls -l node_modules/@hiyocord/hiyocord-nexus-core/dist
 
       - name: set secret
         run: |
