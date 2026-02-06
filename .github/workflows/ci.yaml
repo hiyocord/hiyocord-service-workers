@@ -37,6 +37,9 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: 24
+          registry-url: https://npm.pkg.github.com
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/cache@v5
         with:
           path: "node_modules"
@@ -52,6 +55,10 @@ jobs:
         run: |
           worker_name=$(jq -r ".name"  <(tail -n +3 packages/workers/wrangler.jsonc))
           curl ${NEXUS_URL}/.well-known/nexus-public-key | jq -jr ".public_key" | npx wrangler secret --name ${worker_name} put NEXUS_PUBLIC_KEY
-          npm run -w packages/workers manifest
+          npx gen-key --format=json > keys.json
+          jq -jr ".public_key" keys.json | npx wrangler secret --name ${worker_name} put HIYOCORD_PUBLIC_KEY
+          jq -jr ".private_key" keys.json | npx wrangler secret --name ${worker_name} put HIYOCORD_PRIVATE_KEY
+          jq -jr ".algorithm" keys.json | npx wrangler secret --name ${worker_name} put HIYOCORD_KEY_ALGORITHM
+          npm run -w packages/workers manifest -- "$(jq -jr '.algorithm' keys.json)" "$(jq -jr '.public_key' keys.json)"
         env:
           NEXUS_URL: ${{ secrets.NEXUS_URL }}

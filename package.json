@@ -23,7 +23,8 @@
     "@types/node": "24.10.9",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
-    "vite": "7.3.1"
+    "vite": "7.3.1",
+    "@hiyocord/hiyocord-nexus-cli": "^0.1.3"
   },
   "dependencies": {
     "@hiyocord/hiyocord-nexus-core": "^0.4.0",
