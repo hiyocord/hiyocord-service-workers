@@ -1,6 +1,6 @@
 import { exit } from "process";
 import { registry } from "./register";
-import { createManifest, InteractionHandlerRegistry } from "@hiyocord/hiyocord-nexus-core/src";
+import { createManifest, InteractionHandlerRegistry } from "@hiyocord/hiyocord-nexus-core";
 
 
 
