@@ -30,6 +30,6 @@ if(response.ok) {
   console.log(`OK: Nexus POST /manifest ${response.status}`)
 } else {
   console.error(`Fail: Nexus POST /manifest ${response.status}`)
-  console.error(JSON.stringify(await response.json(), null, 2))
+  console.error(await response.text())
   exit(1)
 }
