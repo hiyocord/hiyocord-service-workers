@@ -12,5 +12,4 @@ export const registry = new SimpleInteractionHandlerRegistry();
   registry.register(InteractionType.ApplicationCommand, handler);
 });
 
-// FIXME cast
-export const resolver = new SimpleInteractionHandlerResolver(registry as any);
+export const resolver = new SimpleInteractionHandlerResolver(registry);
