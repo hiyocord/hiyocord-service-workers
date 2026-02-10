@@ -22,7 +22,7 @@
     "@cloudflare/vite-plugin": "1.24.0",
     "@hiyocord/hiyocord-nexus-cli": "^0.2.1",
     "@hiyocord/wrangler-configurer": "1.0.1",
-    "@types/node": "24.10.12",
+    "@types/node": "24.10.13",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
     "vite": "7.3.1"
