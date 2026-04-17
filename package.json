@@ -24,7 +24,7 @@
     "@hiyocord/wrangler-configurer": "1.0.1",
     "@types/node": "24.12.2",
     "tsx": "4.21.0",
-    "typescript": "6.0.2",
+    "typescript": "6.0.3",
     "vite": "8.0.8"
   }
 }
