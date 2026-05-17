@@ -23,7 +23,7 @@
     "@hiyocord/hiyocord-nexus-cli": "^0.2.1",
     "@hiyocord/wrangler-configurer": "1.0.1",
     "@types/node": "24.12.4",
-    "tsx": "4.22.0",
+    "tsx": "4.22.1",
     "typescript": "6.0.3",
     "vite": "8.0.13"
   }
