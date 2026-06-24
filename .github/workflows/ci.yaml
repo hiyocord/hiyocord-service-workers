@@ -18,14 +18,14 @@ jobs:
           registry-url: https://npm.pkg.github.com
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/cache@v5
+      - uses: actions/cache@v6
         with:
           path: node_modules
           key: node_modules-${{ hashFiles('package-lock.json') }}
       - run: npm install
       - name: build
         run: npm run build
-      - uses: actions/cache/save@v5
+      - uses: actions/cache/save@v6
         with:
           path: packages/**/dist
           key: dist-${{ github.sha }}
@@ -43,11 +43,11 @@ jobs:
           registry-url: https://npm.pkg.github.com
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/cache@v5
+      - uses: actions/cache@v6
         with:
           path: "node_modules"
           key: node_modules-${{ hashFiles('package-lock.json') }}
-      - uses: actions/cache/restore@v5
+      - uses: actions/cache/restore@v6
         with:
           path: packages/**/dist
           key: dist-${{ github.sha }}
