@@ -19,12 +19,12 @@
     "packages/workers"
   ],
   "devDependencies": {
-    "@cloudflare/vite-plugin": "1.63.0",
+    "@cloudflare/vite-plugin": "1.63.1",
     "@hiyocord/hiyocord-nexus-cli": "^0.2.1",
     "@hiyocord/wrangler-configurer": "1.0.1",
     "@types/node": "24.19.1",
     "tsx": "4.23.15",
     "typescript": "7.0.2",
-    "vite": "8.3.3"
+    "vite": "8.3.4"
   }
 }
